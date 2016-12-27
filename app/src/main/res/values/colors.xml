@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF1861A6</color>
+    <color name="colorPrimaryDark">#FF1861A6</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorItemBgNight">#414141</color>
+    <color name="colorItemBgDay">#FEE34A</color>
+
+    <color name="divider_line">#88ffffff</color>
+</resources>

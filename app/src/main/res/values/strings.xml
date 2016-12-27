@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AlarmClock</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="add_clock">添加闹钟</string>
+    <string name="edit_clock">编辑闹钟</string>
+    <string name="a_word">你总说梦想遥不可及，却不曾早起</string>
+</resources>

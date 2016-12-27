@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:background="@color/colorItemBgNight"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_below="@+id/tv_clock_word"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="60dp">
+            <ImageView
+                android:src="@mipmap/ic_sun"
+                android:id="@+id/iv_clock"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_toRightOf="@+id/iv_clock"
+                android:id="@+id/tv_clock_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="20:00"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/sw_clock"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="70dp"
+                    app:switchMinWidth="60dp"
+                    app:switchTextAppearance="@style/BrandedSwitch.text"
+                    app:theme="@style/BrandedSwitch.control"
+                    app:showText="true"
+                    android:textOff="OFF"
+                    android:textOn="ON"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_clock_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:text="@string/a_word"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                style="@style/clock_day_style"
+                android:text="S" />
+
+            <TextView
+                style="@style/clock_day_style"
+                android:text="M" />
+
+            <TextView
+                style="@style/clock_day_style"
+                android:text="T" />
+
+            <TextView
+                style="@style/clock_day_style"
+                android:text="W" />
+
+            <TextView
+                style="@style/clock_day_style"
+                android:text="Th" />
+
+            <TextView
+                style="@style/clock_day_style"
+                android:text="F" />
+
+            <TextView
+                style="@style/clock_day_style"
+                android:text="S" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

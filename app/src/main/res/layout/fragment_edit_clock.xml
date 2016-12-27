@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/ib_edit_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@mipmap/ic_cancel" />
+        <TextView
+            android:textColor="@android:color/white"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_edit_title"
+            android:text="@string/add_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/ib_edit_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@mipmap/ic_confirm" />
+    </RelativeLayout>
+    <View
+        android:background="@color/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.winton.alarmclock.widget.ClockTimerPicker
+                android:id="@+id/ctp_hour"
+                android:layout_width="60dp"
+                android:layout_height="120dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text=":"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <com.winton.alarmclock.widget.ClockTimerPicker
+                android:id="@+id/ctp_min"
+                android:layout_width="60dp"
+                android:layout_height="120dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:background="@color/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp">
+
+        <CheckBox
+            style="@style/clock_day_style"
+            android:button="@null"
+            android:text="S" />
+
+        <CheckBox
+            style="@style/clock_day_style"
+            android:button="@null"
+            android:text="M" />
+
+        <CheckBox
+            style="@style/clock_day_style"
+            android:button="@null"
+            android:text="T" />
+
+        <CheckBox
+            style="@style/clock_day_style"
+            android:button="@null"
+            android:text="W" />
+
+        <CheckBox
+            style="@style/clock_day_style"
+            android:button="@null"
+            android:text="Th" />
+
+        <CheckBox
+            style="@style/clock_day_style"
+            android:button="@null"
+            android:text="F" />
+
+        <CheckBox
+            style="@style/clock_day_style"
+            android:button="@null"
+            android:text="S" />
+    </LinearLayout>
+    <View
+        android:background="@color/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:text="重复"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:text="铃声"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:text="标签"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>
