@@ -26,7 +26,11 @@ public class EditClockActivity extends AppCompatActivity implements View.OnClick
     private ImageButton mIBConfirm;
     private CheckBox mSun;
     private CheckBox mMon;
-    private CheckBox mTurs;
+    private CheckBox mTue;
+    private CheckBox mWed;
+    private CheckBox mThurs;
+    private CheckBox mFri;
+    private CheckBox mSat;
 
 
     private List<String> listHour ;
@@ -43,6 +47,13 @@ public class EditClockActivity extends AppCompatActivity implements View.OnClick
         minPicker = (ClockTimerPicker)findViewById(R.id.ctp_min);
         mIBCancel = (ImageButton)findViewById(R.id.ib_edit_cancel);
         mIBConfirm = (ImageButton)findViewById(R.id.ib_edit_confirm);
+        mSun = (CheckBox)findViewById(R.id.cb_sun);
+        mMon = (CheckBox)findViewById(R.id.cb_mon);
+        mTue = (CheckBox)findViewById(R.id.cb_tue);
+        mWed = (CheckBox)findViewById(R.id.cb_wed);
+        mThurs = (CheckBox)findViewById(R.id.cb_thurs);
+        mFri = (CheckBox)findViewById(R.id.cb_fri);
+        mSat = (CheckBox)findViewById(R.id.cb_sat);
         initIntent();
         initListener();
         initData();
@@ -97,11 +108,20 @@ public class EditClockActivity extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View view) {
         if(view == mIBCancel){
-
+            cancelEdit();
             return;
         }
         if(view == mIBConfirm){
+            saveEdit();
             return;
         }
     }
+
+    private void cancelEdit(){
+        EditClockActivity.this.finish();
+    }
+    private void saveEdit(){
+
+    }
+
 }
