@@ -8,9 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.winton.alarmclock.MyApplication;
 import com.winton.alarmclock.R;
 import com.winton.alarmclock.adapter.ClockListAdapter;
-import com.winton.alarmclock.bean.Clock;
+import com.winton.alarmclock.entity.Clock;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,11 +38,14 @@ public class ClockListFragment extends Fragment {
 
     private void initData(){
         mClocks = new ArrayList<>();
-        for(int i=0;i<20;i++){
-            mClocks.add(new Clock());
-        }
         mAdapter = new ClockListAdapter(getActivity(),mClocks);
         mLV.setAdapter(mAdapter);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        mClocks = MyApplication.getDaoSesion().getClockDao().loadAll();
+        mAdapter.update(mClocks);
+    }
 }

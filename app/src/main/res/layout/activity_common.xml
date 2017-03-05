@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_width="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@mipmap/ic_back" />
+        </FrameLayout>
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_common_title"
+            android:text="@string/add_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@android:color/darker_gray"
+        android:layout_height="0.5dp"/>
+    <EditText
+        android:background="@android:color/white"
+        android:id="@+id/et_common_input"
+        android:layout_width="match_parent"
+        android:layout_height="80dp" />
+    <LinearLayout
+        android:id="@+id/ll_repeat"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/fl_one"
+           style="@style/fl_day_choose_style">
+            <TextView
+                android:textColor="@android:color/white"
+                android:text="星期一"
+                android:gravity="center_vertical|left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <CheckBox
+               style="@style/cb_day_choose_style" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_marginStart="10dp"
+            style="@style/divider_style"/>
+        <FrameLayout
+            android:id="@+id/fl_two"
+            style="@style/fl_day_choose_style">
+            <TextView
+                android:textColor="@android:color/white"
+                android:text="星期二"
+                android:gravity="center_vertical|left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <CheckBox
+                style="@style/cb_day_choose_style" />
+
+        </FrameLayout>
+        <View
+            android:layout_marginStart="10dp"
+            style="@style/divider_style"/>
+        <FrameLayout
+            android:id="@+id/fl_three"
+            style="@style/fl_day_choose_style">
+            <TextView
+                android:textColor="@android:color/white"
+                android:text="星期三"
+                android:gravity="center_vertical|left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <CheckBox
+                style="@style/cb_day_choose_style" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_marginStart="10dp"
+            style="@style/divider_style"/>
+        <FrameLayout
+            android:id="@+id/fl_four"
+            style="@style/fl_day_choose_style">
+            <TextView
+                android:textColor="@android:color/white"
+                android:text="星期四"
+                android:gravity="center_vertical|left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <CheckBox
+                style="@style/cb_day_choose_style" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_marginStart="10dp"
+            style="@style/divider_style"/>
+        <FrameLayout
+            android:id="@+id/fl_five"
+            style="@style/fl_day_choose_style">
+            <TextView
+                android:textColor="@android:color/white"
+                android:text="星期五"
+                android:gravity="center_vertical|left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <CheckBox
+                style="@style/cb_day_choose_style" />
+
+        </FrameLayout>
+        <View
+            android:layout_marginStart="10dp"
+            style="@style/divider_style"/>
+        <FrameLayout
+            android:id="@+id/fl_six"
+            style="@style/fl_day_choose_style">
+            <TextView
+                android:textColor="@android:color/white"
+                android:text="星期六"
+                android:gravity="center_vertical|left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <CheckBox
+                style="@style/cb_day_choose_style" />
+
+        </FrameLayout>
+        <View
+            android:layout_marginStart="10dp"
+            style="@style/divider_style"/>
+        <FrameLayout
+            android:id="@+id/fl_seven"
+            style="@style/fl_day_choose_style">
+            <TextView
+                android:textColor="@android:color/white"
+                android:text="星期日"
+                android:gravity="center_vertical|left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <CheckBox
+                style="@style/cb_day_choose_style" />
+
+        </FrameLayout>
+        <View
+            style="@style/divider_style"/>
+    </LinearLayout>
+</LinearLayout>

@@ -61,38 +61,54 @@
             android:textSize="18sp" />
 
         <LinearLayout
+            android:id="@+id/ll_days"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true">
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp">
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cb_sun"
                 style="@style/clock_day_style"
+                android:button="@null"
                 android:text="S" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cb_mon"
                 style="@style/clock_day_style"
+                android:button="@null"
                 android:text="M" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cb_tue"
                 style="@style/clock_day_style"
+                android:button="@null"
                 android:text="T" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cb_wed"
                 style="@style/clock_day_style"
+                android:button="@null"
                 android:text="W" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cb_thurs"
                 style="@style/clock_day_style"
+                android:button="@null"
                 android:text="Th" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cb_fri"
                 style="@style/clock_day_style"
+                android:button="@null"
                 android:text="F" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/cb_sat"
                 style="@style/clock_day_style"
+                android:button="@null"
                 android:text="S" />
-
         </LinearLayout>
     </RelativeLayout>
 

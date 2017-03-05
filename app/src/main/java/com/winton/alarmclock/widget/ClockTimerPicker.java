@@ -242,6 +242,13 @@ public class ClockTimerPicker  extends View{
         currentSelect = valueList.size() /2;
         invalidate();
     }
+    public String getValue(){
+        String result = null;
+        if(valueList != null){
+            result = valueList.get(currentSelect);
+        }
+        return result;
+    }
 
 
     private float parabola(float zero,float x){

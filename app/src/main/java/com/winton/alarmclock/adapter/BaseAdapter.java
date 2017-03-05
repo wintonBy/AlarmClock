@@ -1,6 +1,7 @@
 package com.winton.alarmclock.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -26,6 +27,11 @@ public abstract class BaseAdapter<T> extends android.widget.BaseAdapter {
             return sourceList.size();
         }
         return 0;
+    }
+
+    public void update(@NonNull  List<T> newData){
+        this.sourceList = newData;
+        this.notifyDataSetChanged();
     }
 
     @Override

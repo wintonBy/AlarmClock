@@ -1,5 +1,6 @@
 package com.winton.alarmclock.fragment;
 
+import android.app.job.JobScheduler;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -57,6 +58,4 @@ public class AddClockFragment extends Fragment {
         minPicker.setData(listMin);
 
     }
-
-
 }

@@ -5,11 +5,13 @@ import android.support.v7.widget.SwitchCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.winton.alarmclock.R;
-import com.winton.alarmclock.bean.Clock;
+import com.winton.alarmclock.entity.Clock;
 import com.winton.alarmclock.utils.DateUtils;
 
 import java.util.List;
@@ -39,14 +41,20 @@ public class ClockListAdapter extends BaseAdapter<Clock> {
             holder.tvDesc = (TextView)view.findViewById(R.id.tv_clock_word);
             holder.ivClockIcon = (ImageView)view.findViewById(R.id.iv_clock);
             holder.swClock = (SwitchCompat)view.findViewById(R.id.sw_clock);
+            holder.llDays = (LinearLayout)view.findViewById(R.id.ll_days);
             view.setTag(holder);
         }else {
             holder = (ViewHolder)view.getTag();
         }
-        holder.tvClockTime.setText("20:00");
-        if(i%2 == 0){
-            holder.tvClockTime.setText("14:00");
-        }
+        holder.tvClockTime.setText(item.getHour()+":"+item.getMinute());
+        ((CheckBox)holder.llDays.getChildAt(0)).setChecked(item.getSun());
+        ((CheckBox)holder.llDays.getChildAt(1)).setChecked(item.getMon());
+        ((CheckBox)holder.llDays.getChildAt(2)).setChecked(item.getTues());
+        ((CheckBox)holder.llDays.getChildAt(3)).setChecked(item.getWed());
+        ((CheckBox)holder.llDays.getChildAt(4)).setChecked(item.getThurs());
+        ((CheckBox)holder.llDays.getChildAt(5)).setChecked(item.getFri());
+        ((CheckBox)holder.llDays.getChildAt(6)).setChecked(item.getSat());
+        holder.tvDesc.setText(item.getTitle());
         String cTime = holder.tvClockTime.getText().toString();
         boolean isNight = DateUtils.isNight(cTime);
         holder.ivClockIcon.setImageDrawable(isNight ? mContext.getResources().getDrawable(R.mipmap.ic_moon):mContext.getResources().getDrawable(R.mipmap.ic_sun));
@@ -59,6 +67,7 @@ public class ClockListAdapter extends BaseAdapter<Clock> {
         TextView tvDesc;
         ImageView ivClockIcon;
         SwitchCompat swClock;
+        LinearLayout llDays;
 
     }
 }

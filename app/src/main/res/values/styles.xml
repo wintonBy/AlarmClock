@@ -25,6 +25,26 @@
         <item name="android:background">@drawable/day_cb_bg</item>
         <item name="android:gravity">center</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:enabled">false</item>
+    </style>
+    <style name="fl_day_choose_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+    </style>
+    <style name="cb_day_choose_style">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:background">@drawable/selector_cb_day_choose</item>
+        <item name="android:button">@null</item>
+        <item name="android:enabled">false</item>
+        <item name="android:layout_gravity">center_vertical|right</item>
+    </style>
+    <style name="divider_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:layout_height">0.5dp</item>
     </style>
     <style name="BrandedSwitch.control" parent="Theme.AppCompat.Light">
         <!-- active thumb & track color (30% transparency) -->
